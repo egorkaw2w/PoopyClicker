@@ -19,17 +19,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PoopyClicker
+namespace PoopyClicker.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Upgrades.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Upgrades : Window
     {
-        public MainWindow()
+        public Upgrades()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            DataContext = new UpgradesViewModel();
         }
     }
 }

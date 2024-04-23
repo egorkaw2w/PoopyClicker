@@ -18,7 +18,8 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ClickButt" Grid.Column="1"  Grid.Row="1" Content="Кликай" FontSize="20"></Button>
-        <TextBlock x:Name="ClickCount" Grid.Column="1" Text="{Binding clicker.click}"></TextBlock>
+        <Button Grid.Column="1"  Grid.Row="1"  Command="{Binding addcount,Mode=TwoWay}" Content="сри" FontSize="20" ></Button>
+        <TextBlock x:Name="ClickCount" Grid.Column="1" Text="{Binding Clicks}" VerticalAlignment="Center" HorizontalAlignment="Center" ></TextBlock>
+        <Button Grid.Column="3" Grid.Row="2" Command="{Binding open}" Content="Улучшеня" FontSize="24"></Button>
     </Grid>
 </Window>
