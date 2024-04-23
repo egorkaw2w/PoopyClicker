@@ -1,6 +1,10 @@
-﻿using System;
+﻿using PoopyClicker.Model;
+using PoopyClicker.ViewModel;
+using PoopyClicker.ViewModel.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PoopyClicker
+namespace PoopyClicker 
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +27,12 @@ namespace PoopyClicker
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
+            DataContext = new clicker();
+      
+
+
         }
+  
     }
 }
