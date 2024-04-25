@@ -31,5 +31,12 @@ namespace PoopyClicker.View
             InitializeComponent();
             DataContext = new UpgradesViewModel();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<Window x:Class="PoopyClicker.MainWindow"
+        DataContext="{Binding RelativeSource={RelativeSource SELF}}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -18,8 +19,13 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="1"  Grid.Row="1"  Command="{Binding addcount,Mode=TwoWay}" Content="сри" FontSize="20" ></Button>
+        <Button  Grid.Column="1"  Grid.Row="1"  Command="{Binding addcount,Mode=TwoWay}"  FontSize="20"  >
+            <Grid >
+                <Image Source="../Model/pictures/i.webp" Height="141" VerticalAlignment="Center" HorizontalAlignment="Left" Width="149"/>
+            </Grid>
+        </Button>
         <TextBlock x:Name="ClickCount" Grid.Column="1" Text="{Binding Clicks}" VerticalAlignment="Center" HorizontalAlignment="Center" ></TextBlock>
-        <Button Grid.Column="3" Grid.Row="2" Command="{Binding open}" Content="Улучшеня" FontSize="24"></Button>
+        <Button Grid.Column="3" Grid.Row="2"  Content="Улучшеня" FontSize="24" Click="Button_Click_1"></Button>
+        <Button Grid.Row="3" Content="Титры" FontSize="24" Click="Button_Click_2"></Button>
     </Grid>
 </Window>

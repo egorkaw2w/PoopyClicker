@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using PoopyClicker.Model;
 using PoopyClicker.View;
 using PoopyClicker.ViewModel.Helpers;
 using System;
@@ -13,18 +14,37 @@ namespace PoopyClicker.ViewModel
 {
     internal class UpgradesViewModel : BindingHelper
     {
-		private int upgrades;
 
-		public int UpgradeView
-		{
-			get { return upgrades; }
-			set { upgrades = value; }
-		}
+        private BindableCommand viewer;
 
-		private void upgrview()
-		{
-			 
-		}
+        public BindableCommand Viewer
+        {
+            get { return viewer; }
+            set { viewer = value;
+                OnPropertyChanged();
+            }
+        }
 
-	}
+
+        public UpgradesViewModel()
+        {
+            viewer = new BindableCommand(_ => upgrview());
+        }
+
+        private List<upgrades> upgrList = new List<upgrades>();
+
+        public List<upgrades>  UpgrList
+        {
+            get { return upgrList; }
+            set { upgrList = value; OnPropertyChanged(); }
+        }
+
+        private void upgrview()
+        {
+            upgrades upg1 = new upgrades("что то", "нечто", 10);
+            upgrList.Add(upg1);
+            OnPropertyChanged();
+        }
+
+    }
 }

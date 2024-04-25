@@ -1,4 +1,5 @@
 ﻿using PoopyClicker.Model;
+using PoopyClicker.View;
 using PoopyClicker.ViewModel;
 using PoopyClicker.ViewModel.Helpers;
 using System;
@@ -30,6 +31,21 @@ namespace PoopyClicker
         {
             InitializeComponent();
             DataContext = new MainViewModel();
+        }
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Upgrades upg = new Upgrades();
+            upg.Show();
+            Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Gallery titri = new Gallery();
+            titri.Show();
+            Close();
         }
     }
 }

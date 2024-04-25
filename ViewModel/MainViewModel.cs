@@ -34,9 +34,6 @@ namespace PoopyClicker.ViewModel.Helpers
         public MainViewModel()
         {
             addcount = new BindableCommand(_ => Counter());
-            open = new BindableCommand(_ => updOpen());
-
-
         }
 
         public void Counter()
@@ -59,13 +56,7 @@ namespace PoopyClicker.ViewModel.Helpers
         }
 
 
-        private void updOpen()
-        {
-            Upgrades upg = new Upgrades();
-            upg.Show();
-         
-            
-        }
+
 
     }
 }
